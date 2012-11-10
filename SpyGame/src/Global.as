@@ -6,6 +6,8 @@ package
 			public static var lives  :int;
 			public static var caught :Boolean;
 			public static var win    :Boolean;
+			public static var xVelocity: int;
+			public static var yVelocity: int;
 	}
 
 }

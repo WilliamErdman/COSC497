@@ -29,7 +29,7 @@ package
 			Global.lives = 3;
 			Global.caught = false;
 			
-			State.current = new ShellState();
+			State.current = new GameState();
 			
 			addEventListener( Event.ENTER_FRAME, update );
 		}

@@ -15,7 +15,8 @@ package
 		
 		public var texture : Bitmap;
 		
-		public static var active: Boolean = false;
+		private static var ready: Boolean = false;
+		private static var spawnTime: uint;
 
 
 		/// CTOR
@@ -28,8 +29,8 @@ package
 			
 			texture = new Resources.spyBMP();
 			
-			this.x = 650;
-			this.y = 500;
+			spawnTime = (TimeCounter.frameCount + 10);
+			ready = false;
 		}
 
 
@@ -39,14 +40,26 @@ package
 			const MIN_COLLISION_CHECK_PIXELS:int = 64;
 			
 			if ( Input.getKey( Keyboard.S ) || Input.getKey( Keyboard.DOWN ) )
+			{
 				this.y += SPEED * TimeCounter.deltaTime;
+				Global.yVelocity = 1;
+			}
 			if ( Input.getKey( Keyboard.W ) || Input.getKey( Keyboard.UP ) )
+			{
 				this.y -= SPEED * TimeCounter.deltaTime;
+				Global.yVelocity = -1;
+			}
 
 			if ( Input.getKey( Keyboard.D ) || Input.getKey( Keyboard.RIGHT ) )
+			{
 				this.x += SPEED * TimeCounter.deltaTime;
+				Global.xVelocity = 1;
+			}
 			if ( Input.getKey( Keyboard.A ) || Input.getKey( Keyboard.LEFT) )
+			{
 				this.x -= SPEED * TimeCounter.deltaTime;
+				Global.xVelocity = -1;
+			}
 				
 			texture.x = (x - 10);
 			texture.y = (y - 10);
@@ -58,7 +71,7 @@ package
 				guard = guards[i];	
 				
 				if ( Math.abs( this.x - guard.x ) < MIN_COLLISION_CHECK_PIXELS ||
-					 Math.abs( this.y - guard.y ) < MIN_COLLISION_CHECK_PIXELS )
+					Math.abs( this.y - guard.y ) < MIN_COLLISION_CHECK_PIXELS )
 				{
 					if ( this.hitTestObject( guard ) )
 					{
