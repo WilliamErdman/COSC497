@@ -12,12 +12,16 @@ package
 	public class Door extends Sprite
 	{
 		
+		public var texture : Bitmap;
+		
 		public function Door() 
 		{
 			var g:Graphics = this.graphics;	
-			g.beginFill( 0x335271);
+			g.beginFill( 0x00fefe);
 			g.drawRect(0, 0, 30, 30);
 			g.endFill();
+			
+			texture = new Resources.door();
 		}
 		
 		public function update( player: Player ) :Boolean
@@ -33,6 +37,9 @@ package
 						return true;
 					}
 				}
+				
+			texture.x = (x);
+			texture.y = (y);
 
 			return false;
 		}

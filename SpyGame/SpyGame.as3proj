@@ -67,7 +67,16 @@
   <!-- Assets to embed into the output SWF -->
   <library>
     <asset path="lib\Spy.png" update="..\..\..\Desktop\SpyGame\Art Assets\Spy.png" />
-    <asset path="lib\Guard.png" update="..\..\..\Desktop\SpyGame\Art Assets\Guard.png" />
+    <asset path="lib\Guard.png" update="..\..\..\..\Desktop\SpyGame\Art Assets\Spy\Guard.png" />
+    <asset path="lib\SpyStill.png" update="..\..\..\..\Desktop\SpyGame\Art Assets\Spy\SpyStill.png" />
+    <asset path="lib\SpyRight.png" update="..\..\..\..\Desktop\SpyGame\Art Assets\Spy\SpyRight.png" />
+    <asset path="lib\SpyLeft.png" update="..\..\..\..\Desktop\SpyGame\Art Assets\Spy\SpyLeft.png" />
+    <asset path="lib\SpyBack.png" update="..\..\..\..\Desktop\SpyGame\Art Assets\Spy\SpyBack.png" />
+    <asset path="lib\SpyStill.png" />
+    <asset path="lib\Guard.png" />
+    <asset path="lib\Door.png" update="..\..\..\..\Desktop\SpyGame\Art Assets\Spy\Door.png" />
+    <asset path="lib\SpyStill.png" />
+    <asset path="lib\SpyStill.png" />
   </library>
   <!-- Class files to compile (other referenced classes will automatically be included) -->
   <compileTargets>

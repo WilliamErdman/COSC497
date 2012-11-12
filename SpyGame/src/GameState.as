@@ -17,25 +17,25 @@ package
 		public function start(): void
 		{			
 			player = new Player();
-			Display.main.addChild( player );
+			Display.main.addChild( player.texture );
 			
 			door = new Door();
-			Display.main.addChild( door );
+			Display.main.addChild( door.texture );
 			
 			if (Global.level == 1)
 			{
-			    door.x = 50;
-				door.y = 50;
+			    door.x = 270;
+				door.y = 160;
 			}
 			if (Global.level == 2)
 			{
-			    door.x = 100;
-				door.y = 100;
+			    door.x = 745;
+				door.y = 25;
 			}
 			if (Global.level == 3)
 			{
-			    door.x = 150;
-				door.y = 150;
+			    door.x = 380;
+				door.y = 25;
 			}
 			
 			player.x = 730;
@@ -116,6 +116,238 @@ package
 				wall.x = 400;
 				wall.y = 160;
 				wall.start( 20, 300);
+				
+				wall = new Wall();
+				walls.push(wall);
+				Display.main.addChild( wall );
+				wall.x = 250;
+				wall.y = 160;
+				wall.start( 20, 415);
+			}
+			else if (Global.level == 2)
+			{
+				//box walls
+				wall = new Wall();
+				walls.push(wall);
+				Display.main.addChild( wall );
+				wall.x = 0;
+				wall.y = 0;
+				wall.start( 25, 575);
+				
+				wall = new Wall();
+				walls.push(wall);
+				Display.main.addChild( wall );
+				wall.x = 0;
+				wall.y = 0;
+				wall.start( 800, 25);
+				
+				wall = new Wall();
+				walls.push(wall);
+				Display.main.addChild( wall );
+				wall.x = 0;
+				wall.y = 575;
+				wall.start( 800, 25);
+				
+				wall = new Wall();
+				walls.push(wall);
+				Display.main.addChild( wall );
+				wall.x = 775;
+				wall.y = 0;
+				wall.start( 25, 775);
+				
+				//Per Level
+				wall = new Wall();
+				walls.push(wall);
+				Display.main.addChild( wall );
+				wall.x = 100;
+				wall.y = 450;
+				wall.start( 775, 20);
+				
+				wall = new Wall();
+				walls.push(wall);
+				Display.main.addChild( wall );
+				wall.x = 100;
+				wall.y = 100;
+				wall.start( 20, 350);
+				
+				wall = new Wall();
+				walls.push(wall);
+				Display.main.addChild( wall );
+				wall.x = 700;
+				wall.y = 0;
+				wall.start( 20, 380);
+				
+				wall = new Wall();
+				walls.push(wall);
+				Display.main.addChild( wall );
+				wall.x = 100;
+				wall.y = 100;
+				wall.start( 480, 20);
+				
+				wall = new Wall();
+				walls.push(wall);
+				Display.main.addChild( wall );
+				wall.x = 190;
+				wall.y = 360;
+				wall.start( 530, 20);
+				
+				wall = new Wall();
+				walls.push(wall);
+				Display.main.addChild( wall );
+				wall.x = 190;
+				wall.y = 230;
+				wall.start( 460, 20);
+			}
+			else if (Global.level == 3)
+			{
+				//box walls
+				wall = new Wall();
+				walls.push(wall);
+				Display.main.addChild( wall );
+				wall.x = 0;
+				wall.y = 0;
+				wall.start( 25, 575);
+				
+				wall = new Wall();
+				walls.push(wall);
+				Display.main.addChild( wall );
+				wall.x = 0;
+				wall.y = 0;
+				wall.start( 800, 25);
+				
+				wall = new Wall();
+				walls.push(wall);
+				Display.main.addChild( wall );
+				wall.x = 0;
+				wall.y = 575;
+				wall.start( 800, 25);
+				
+				wall = new Wall();
+				walls.push(wall);
+				Display.main.addChild( wall );
+				wall.x = 775;
+				wall.y = 0;
+				wall.start( 25, 775);
+				
+				//Per Level
+				wall = new Wall();
+				walls.push(wall);
+				Display.main.addChild( wall );
+				wall.x = 700;
+				wall.y = 0;
+				wall.start(20, 300);
+				
+				wall = new Wall();
+				walls.push(wall);
+				Display.main.addChild( wall );
+				wall.x = 700;
+				wall.y = 350;
+				wall.start(20, 300);
+				
+				wall = new Wall();
+				walls.push(wall);
+				Display.main.addChild( wall );
+				wall.x = 550;
+				wall.y = 280;
+				wall.start(150, 20);
+				
+				wall = new Wall();
+				walls.push(wall);
+				Display.main.addChild( wall );
+				wall.x = 350;
+				wall.y = 280;
+				wall.start(150, 20);
+				
+				wall = new Wall();
+				walls.push(wall);
+				Display.main.addChild( wall );
+				wall.x = 550;
+				wall.y = 380;
+				wall.start(150, 20);
+				
+				wall = new Wall();
+				walls.push(wall);
+				Display.main.addChild( wall );
+				wall.x = 350;
+				wall.y = 380;
+				wall.start(150, 20);
+				
+				wall = new Wall();
+				walls.push(wall);
+				Display.main.addChild( wall );
+				wall.x = 480;
+				wall.y = 200;
+				wall.start(20, 100);
+				
+				wall = new Wall();
+				walls.push(wall);
+				Display.main.addChild( wall );
+				wall.x = 480;
+				wall.y = 200;
+				wall.start(150, 20);
+				
+				wall = new Wall();
+				walls.push(wall);
+				Display.main.addChild( wall );
+				wall.x = 480;
+				wall.y = 0;
+				wall.start(20, 150);
+				
+				wall = new Wall();
+				walls.push(wall);
+				Display.main.addChild( wall );
+				wall.x = 610;
+				wall.y = 60;
+				wall.start(20, 150);
+				
+				wall = new Wall();
+				walls.push(wall);
+				Display.main.addChild( wall );
+				wall.x = 100;
+				wall.y = 130;
+				wall.start(400, 20);
+				
+				wall = new Wall();
+				walls.push(wall);
+				Display.main.addChild( wall );
+				wall.x = 340;
+				wall.y = 280;
+				wall.start(20, 120);
+				
+				wall = new Wall();
+				walls.push(wall);
+				Display.main.addChild( wall );
+				wall.x = 480;
+				wall.y = 400;
+				wall.start(20, 120);
+				
+				wall = new Wall();
+				walls.push(wall);
+				Display.main.addChild( wall );
+				wall.x = 100;
+				wall.y = 325;
+				wall.start(260, 20);
+				
+				wall = new Wall();
+				walls.push(wall);
+				Display.main.addChild( wall );
+				wall.x = 100;
+				wall.y = 200;
+				wall.start(260, 20);
+				
+				wall = new Wall();
+				walls.push(wall);
+				Display.main.addChild( wall );
+				wall.x = 100;
+				wall.y = 390;
+				wall.start(20, 100);
+				
+				wall = new Wall();
+				walls.push(wall);
+				Display.main.addChild( wall );
+				wall.x = 100;
+				wall.y = 470;
+				wall.start(250, 20);
 			}
 			
 			guards = new Vector.<Guard>;
@@ -125,22 +357,279 @@ package
 				//guard 1 level 1
 				guard = new Guard( player );
 				guards.push(guard);
-				Display.main.addChild( guard );
+				Display.main.addChild( guard.texture );
 				guard.x = 640;
 				guard.y = 420;
 				
 				//guard 2 level 1
 				guard = new Guard( player);
 				guards.push(guard);
-				Display.main.addChild( guard );
+				Display.main.addChild( guard.texture );
 				guard.x = 710;
 				guard.y = 350;
 				
 				guard = new Guard( player);
 				guards.push(guard);
-				Display.main.addChild( guard );
+				Display.main.addChild( guard.texture );
 				guard.x = 740;
 				guard.y = 190;
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x =470;
+				guard.y = 470;
+				guard.pacingY(true, guard.x, guard.y, 50);
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 380;
+				guard.y = 490;
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 320;
+				guard.y = 300;
+				guard.pacingX(true, guard.x, guard.y, 50);
+			}
+			else if (Global.level == 2)
+			{
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 500;
+				guard.y = 500;
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 200;
+				guard.y = 500;
+				guard.pacingX(true, guard.x, guard.y, 100);
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 150;
+				guard.y = 230;
+				guard.pacingY(true, guard.x, guard.y, 100);
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 250;
+				guard.y = 150;
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 400;
+				guard.y = 130;
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 480;
+				guard.y = 160;
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 400;
+				guard.y = 300;
+				guard.pacingX(true, guard.x, guard.y, 100);
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 300;
+				guard.y = 260;
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 530;
+				guard.y = 320;
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 510;
+				guard.y = 420;
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 570;
+				guard.y = 380;
+			}
+			else if (Global.level == 3)
+			{
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 630;
+				guard.y = 310;
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 500;
+				guard.y = 325;
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 580;
+				guard.y = 460;
+				guard.pacingX(true, guard.x, guard.y, 70);
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 530;
+				guard.y = 540;
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 580;
+				guard.y = 460;
+				guard.pacingX(true, guard.x, guard.y, 70);
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 200;
+				guard.y = 350;
+				guard.pacingX(true, guard.x, guard.y, 70);
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 400;
+				guard.y = 470;
+				guard.pacingY(true, guard.x, guard.y, 60);
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 570;
+				guard.y = 250;
+				guard.pacingX(true, guard.x, guard.y, 70);
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 370;
+				guard.y = 200;
+				guard.pacingY(true, guard.x, guard.y, 50);
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 200;
+				guard.y = 255;
+				guard.pacingY(true, guard.x, guard.y, 35);
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 60;
+				guard.y = 255;
+				guard.pacingY(true, guard.x, guard.y, 100);
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 640;
+				guard.y = 170;
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 550;
+				guard.y = 100;
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 530;
+				guard.y = 160;
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 440;
+				guard.y = 240;
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 300;
+				guard.y = 260;
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 130;
+				guard.y = 240;
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 210;
+				guard.y = 145;
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 500;
+				guard.y = 50;
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 100;
+				guard.y = 50;
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 150;
+				guard.y = 100;
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 200;
+				guard.y = 430;
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 300;
+				guard.y = 390;
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 300;
+				guard.y = 540;
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 230;
+				guard.y = 500;
+				
+				guard = new Guard( player);
+				guards.push(guard);
+				Display.main.addChild( guard.texture );
+				guard.x = 60;
+				guard.y = 480;
 			}
 		}
 		
@@ -164,10 +653,12 @@ package
 				{
 				Global.lives--;
 				State.current = new LoadingState();
+				return;
 				}
 				else if (Global.lives <= 0)
 				{
 					State.current = new LoseState();
+					return;
 				}
 			}
 			
@@ -176,7 +667,8 @@ package
 				if (Global.level < 3)
 				{
 				Global.level++;
-				State.current = new LoadingState();
+				State.current = new LoadingStateLevel();
+				return;
 				}
 				else if (Global.level >= 3)
 				{

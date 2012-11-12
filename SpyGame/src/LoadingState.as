@@ -27,21 +27,26 @@ package
 			var tf  :TextField;
 			
 			tf = maketf();
-			tf.text = "YOU DIED!";
+			tf.text = "You've Been Compromised";
 			tf.y = 10;
 			Display.ui.addChild( tf );
 			
 			tf = maketf();
-			tf.text = "LIVES: " + Global.lives;
+			tf.text = "Retrys: " + Global.lives;
 			tf.y = 70;
 			Display.ui.addChild( tf );
 			
 			var button :Sprite;
 			
-			button = makeButton("Press SPACE 2 Reset", clickPlay );
+			button = makeButton("Reset", clickPlay );
 			Display.ui.addChild( button );
 			button.x = 5;
 			button.y = 150;
+			
+			button = makeButton("Main Menu", clickMenu );
+			Display.ui.addChild( button );
+			button.x = 5;
+			button.y = 210;
 		}
 		
 		public function update(): void
@@ -62,6 +67,13 @@ package
 			trace("ShellState: play");
 			
 			State.current = new GameState();
+		}
+		
+		public function clickMenu ( button:ButtonPure ):void
+		{
+			trace("ShellState: menu");
+			
+			State.current = new ShellState();
 		}	
 		
 	}

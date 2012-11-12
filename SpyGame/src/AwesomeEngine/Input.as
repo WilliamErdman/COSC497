@@ -128,7 +128,7 @@ package AwesomeEngine
 				if (keys[code] == PRESS && keyState.frame < TimeCounter.frameCount)
 				{
 					keys[code] = PAUSE;
-					keyState.frame = (TimeCounter.frameCount + 2);
+					keyState.frame = (TimeCounter.frameCount + 1);
 					doubleTimer = (TimeCounter.frameCount + 5);
 					doubleReady = true;			
 					continue;

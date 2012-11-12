@@ -25,13 +25,13 @@ package
 			var tf  :TextField;
 			
 			tf = maketf();
-			tf.text = "YOU DIED!";
+			tf.text = "Mission Scrubed";
 			tf.y = 10;
 			Display.ui.addChild( tf );
 			
 			var button :Sprite;
 			
-			button = makeButton("Press Esc 2 Reset", clickPlay );
+			button = makeButton("Main Menu", clickPlay );
 			Display.ui.addChild( button );
 			button.x = 5;
 			button.y = 150;

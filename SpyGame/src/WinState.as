@@ -22,13 +22,13 @@ package
 			var tf  :TextField;
 			
 			tf = maketf();
-			tf.text = "YOU WIN!";
+			tf.text = "You Got to the Party!";
 			tf.y = 10;
 			Display.ui.addChild( tf );
 			
 			var button :Sprite;
 			
-			button = makeButton("Press Esc 2 Reset", clickPlay );
+			button = makeButton("MainMenu", clickPlay );
 			Display.ui.addChild( button );
 			button.x = 5;
 			button.y = 150;
@@ -52,7 +52,7 @@ package
 		{
 			trace("ShellState: play");
 			
-			State.current = new GameState();
+			State.current = new ShellState();
 		}	
 		
 	}

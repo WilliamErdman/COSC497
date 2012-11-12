@@ -3,7 +3,6 @@ package
 	import AwesomeEngine.*;
 	import flash.display.Sprite;
 	import flash.events.Event;
-	import flash.display.Graphics;
 	
 	/**
 	 * ...
@@ -29,7 +28,7 @@ package
 			Global.lives = 3;
 			Global.caught = false;
 			
-			State.current = new GameState();
+			State.current = new ShellState();
 			
 			addEventListener( Event.ENTER_FRAME, update );
 		}

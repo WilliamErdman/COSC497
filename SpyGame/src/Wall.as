@@ -21,11 +21,11 @@ package
 		public function start( width: uint, height: uint): uint
 		{
 			var g:Graphics = this.graphics;	
-			g.beginFill( 0x335271);
+			g.beginFill( 0x030501);
 			g.drawRect(0, 0, width, height);
 			g.endFill();
 			
-			return 4333;
+			return 0000;
 		}
 		
 		public function update( player: Player ) :Boolean
@@ -38,14 +38,14 @@ package
 					if ( this.hitTestObject( player ) )
 					{
 						if (Global.xVelocity > 0)
-						player.x -= (20 + 2);
+						player.x -= (5);
 						else if (Global.xVelocity < 0)
-						player.x += (20 + 2);
+						player.x += (5);
 						
 						if (Global.yVelocity < 0)
-						player.y += (20 + 2);
+						player.y += (5);
 						else if (Global.yVelocity > 0)
-						player.y -= (20 + 2);
+						player.y -= (5);
 					}
 				}
 			

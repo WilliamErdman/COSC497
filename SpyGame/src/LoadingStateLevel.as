@@ -9,35 +9,44 @@ package
 	import flash.text.TextField;
 	import flash.ui.Keyboard;
 	
-	public class ShellState implements IState
+	public class LoadingStateLevel implements IState
 	{
+		private var player  :Player;
+		private var guards  :Vector.<Guard>;
 		
-		public function ShellState() 
+		public function LoadingStateLevel() 
 		{
 			
 		}
 		
 		public function start():void
 		{
-			Global.level = 1;
-			Global.win = false;
 			Global.caught = false;
-			Global.lives = 3;
+			Global.win = false;
 			
 			var tf  :TextField;
 			
 			tf = maketf();
-			tf.text = "Main Menu";
+			tf.text = "Preparing Next Phase";
 			tf.y = 10;
+			Display.ui.addChild( tf );
+			
+			tf = maketf();
+			tf.text = "Retrys: " + Global.lives;
+			tf.y = 70;
+			Display.ui.addChild( tf );
+			
+			tf = maketf();
+			tf.text = "Level: " + Global.level;
+			tf.y = 140;
 			Display.ui.addChild( tf );
 			
 			var button :Sprite;
 			
-			button = makeButton("Play", clickPlay );
+			button = makeButton("Deploy", clickPlay );
 			Display.ui.addChild( button );
 			button.x = 5;
-			button.y = 150;
-			
+			button.y = 200;
 		}
 		
 		public function update(): void
@@ -45,10 +54,10 @@ package
 			if (Input.getKeyDown( Keyboard.SPACE))
 			{
 				State.current = new GameState();
-			}
+			} 
 		}
 		
-		public function end():void
+		public function end(): void
 		{
 			Display.clear();
 		}
@@ -58,8 +67,7 @@ package
 			trace("ShellState: play");
 			
 			State.current = new GameState();
-		}	
-		
+		}
 	}
 
 }

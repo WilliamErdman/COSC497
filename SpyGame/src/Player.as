@@ -8,6 +8,8 @@ package
 	import flash.geom.Vector3D;
 	import flash.ui.Keyboard;
 	import flash.events.Event;
+	import flash.media.Sound;
+	import flash.media.SoundMixer;
 
 	public class Player extends Sprite
 	{
@@ -24,10 +26,10 @@ package
 		{
 			var g:Graphics = this.graphics;	
 			g.beginFill( 0x000000 );
-			g.drawRect(0, 0, 20, 20);
+			g.drawRect(0, 0, 15, 15);
 			g.endFill();
 			
-			texture = new Resources.spyBMP();
+			texture = new Resources.spyForward();
 			
 			spawnTime = (TimeCounter.frameCount + 10);
 			ready = false;
@@ -37,7 +39,7 @@ package
 		/// Per frame update
 		public function update(guards:Vector.<Guard> ) :Boolean
 		{			
-			const MIN_COLLISION_CHECK_PIXELS:int = 64;
+			const MIN_COLLISION_CHECK_PIXELS:int = 70;
 			
 			if ( Input.getKey( Keyboard.S ) || Input.getKey( Keyboard.DOWN ) )
 			{
@@ -61,8 +63,8 @@ package
 				Global.xVelocity = -1;
 			}
 				
-			texture.x = (x - 10);
-			texture.y = (y - 10);
+			texture.x = (x);
+			texture.y = (y);
 			
 			var len:int  = guards.length;
 			var guard:Guard;
